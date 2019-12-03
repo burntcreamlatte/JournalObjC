@@ -46,7 +46,7 @@
         [EntryController.shared addEntry:newEntry];
         
     }
-    
+    [self.navigationController popViewControllerAnimated:true];
 
 }
 - (IBAction)clearTextButtonTapped:(id)sender {

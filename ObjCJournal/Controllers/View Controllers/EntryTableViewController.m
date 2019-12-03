@@ -16,6 +16,11 @@
 
 @implementation EntryTableViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -29,9 +34,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"entryCell" forIndexPath:indexPath];
+    AAREntry *entryToPopulate = EntryController.shared.entries[indexPath.row];
     
-    // Configure the cell...
+    NSDateFormatter *df = [NSDateFormatter new];
+    df.dateFormat = @"MM/d h:mm a";
     
+    cell.textLabel.text = entryToPopulate.title;
+    cell.detailTextLabel.text =[df stringFromDate:entryToPopulate.timestamp];
     return cell;
 }
 

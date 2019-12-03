@@ -12,6 +12,16 @@
 @implementation EntryController
 
 
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        _entries = [NSMutableArray<AAREntry *> new];
+        
+    }
+    return self;
+}
+
 + (EntryController *) shared {
     static EntryController *shared = nil;
     static dispatch_once_t onceToken;
