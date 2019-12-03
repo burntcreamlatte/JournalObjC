@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		AB80ABD32395AF0C00A702DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABD22395AF0C00A702DB /* AppDelegate.m */; };
 		AB80ABD62395AF0C00A702DB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABD52395AF0C00A702DB /* SceneDelegate.m */; };
-		AB80ABD92395AF0C00A702DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABD82395AF0C00A702DB /* ViewController.m */; };
 		AB80ABDC2395AF0C00A702DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB80ABDA2395AF0C00A702DB /* Main.storyboard */; };
 		AB80ABDE2395AF0D00A702DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB80ABDD2395AF0D00A702DB /* Assets.xcassets */; };
 		AB80ABE12395AF0D00A702DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB80ABDF2395AF0D00A702DB /* LaunchScreen.storyboard */; };
 		AB80ABE42395AF0D00A702DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABE32395AF0D00A702DB /* main.m */; };
+		AB80ABF72395B0B800A702DB /* AAREntry.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABF62395B0B800A702DB /* AAREntry.m */; };
+		AB80ABFA2395B47D00A702DB /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABF92395B47D00A702DB /* EntryController.m */; };
+		AB80ABFD2395BFB800A702DB /* EntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABFC2395BFB800A702DB /* EntryTableViewController.m */; };
+		AB80AC002395C42400A702DB /* EntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80ABFF2395C42400A702DB /* EntryDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +25,19 @@
 		AB80ABD22395AF0C00A702DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AB80ABD42395AF0C00A702DB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		AB80ABD52395AF0C00A702DB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		AB80ABD72395AF0C00A702DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AB80ABD82395AF0C00A702DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AB80ABDB2395AF0C00A702DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB80ABDD2395AF0D00A702DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB80ABE02395AF0D00A702DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB80ABE22395AF0D00A702DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB80ABE32395AF0D00A702DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB80ABF52395B0B800A702DB /* AAREntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAREntry.h; sourceTree = "<group>"; };
+		AB80ABF62395B0B800A702DB /* AAREntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAREntry.m; sourceTree = "<group>"; };
+		AB80ABF82395B47D00A702DB /* EntryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		AB80ABF92395B47D00A702DB /* EntryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
+		AB80ABFB2395BFB800A702DB /* EntryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryTableViewController.h; sourceTree = "<group>"; };
+		AB80ABFC2395BFB800A702DB /* EntryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryTableViewController.m; sourceTree = "<group>"; };
+		AB80ABFE2395C42400A702DB /* EntryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryDetailViewController.h; sourceTree = "<group>"; };
+		AB80ABFF2395C42400A702DB /* EntryDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +70,81 @@
 		AB80ABD02395AF0C00A702DB /* ObjCJournal */ = {
 			isa = PBXGroup;
 			children = (
+				AB80ABF12395AF6300A702DB /* Views */,
+				AB80ABEE2395AF4C00A702DB /* Controllers */,
+				AB80ABEB2395AF2700A702DB /* Models */,
+				AB80ABEA2395AF1F00A702DB /* Resources */,
+			);
+			path = ObjCJournal;
+			sourceTree = "<group>";
+		};
+		AB80ABEA2395AF1F00A702DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				AB80ABD12395AF0C00A702DB /* AppDelegate.h */,
 				AB80ABD22395AF0C00A702DB /* AppDelegate.m */,
 				AB80ABD42395AF0C00A702DB /* SceneDelegate.h */,
 				AB80ABD52395AF0C00A702DB /* SceneDelegate.m */,
-				AB80ABD72395AF0C00A702DB /* ViewController.h */,
-				AB80ABD82395AF0C00A702DB /* ViewController.m */,
-				AB80ABDA2395AF0C00A702DB /* Main.storyboard */,
 				AB80ABDD2395AF0D00A702DB /* Assets.xcassets */,
 				AB80ABDF2395AF0D00A702DB /* LaunchScreen.storyboard */,
 				AB80ABE22395AF0D00A702DB /* Info.plist */,
 				AB80ABE32395AF0D00A702DB /* main.m */,
 			);
-			path = ObjCJournal;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB80ABEB2395AF2700A702DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AB80ABF52395B0B800A702DB /* AAREntry.h */,
+				AB80ABF62395B0B800A702DB /* AAREntry.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AB80ABEE2395AF4C00A702DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB80ABF02395AF5600A702DB /* Model Controllers */,
+				AB80ABEF2395AF5000A702DB /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB80ABEF2395AF5000A702DB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB80ABFB2395BFB800A702DB /* EntryTableViewController.h */,
+				AB80ABFC2395BFB800A702DB /* EntryTableViewController.m */,
+				AB80ABFE2395C42400A702DB /* EntryDetailViewController.h */,
+				AB80ABFF2395C42400A702DB /* EntryDetailViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AB80ABF02395AF5600A702DB /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB80ABF82395B47D00A702DB /* EntryController.h */,
+				AB80ABF92395B47D00A702DB /* EntryController.m */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		AB80ABF12395AF6300A702DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB80ABF22395AF6800A702DB /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB80ABF22395AF6800A702DB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB80ABDA2395AF0C00A702DB /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB80ABD92395AF0C00A702DB /* ViewController.m in Sources */,
+				AB80ABFA2395B47D00A702DB /* EntryController.m in Sources */,
+				AB80ABF72395B0B800A702DB /* AAREntry.m in Sources */,
+				AB80ABFD2395BFB800A702DB /* EntryTableViewController.m in Sources */,
 				AB80ABD32395AF0C00A702DB /* AppDelegate.m in Sources */,
 				AB80ABE42395AF0D00A702DB /* main.m in Sources */,
+				AB80AC002395C42400A702DB /* EntryDetailViewController.m in Sources */,
 				AB80ABD62395AF0C00A702DB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y2XBHVDM;
-				INFOPLIST_FILE = ObjCJournal/Info.plist;
+				INFOPLIST_FILE = ObjCJournal/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69Y2XBHVDM;
-				INFOPLIST_FILE = ObjCJournal/Info.plist;
+				INFOPLIST_FILE = ObjCJournal/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EntryTableViewController.h
 //  ObjCJournal
 //
 //  Created by Aaron Shackelford on 12/2/19.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface EntryTableViewController : UITableViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
